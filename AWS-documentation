@@ -1,1 +1,7 @@
 AWS documentation
+Different ways to connect with EC2(VM Machine)
+     1.AWS CLI (Command Line Interface)
+     2.AWS CFT(Cloud Formation Template)
+     3.AWS GUI (Graphical User Interface)
+     4.Terraform
+     5.AWS CDK (Cloud development Kit)
