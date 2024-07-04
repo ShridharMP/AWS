@@ -15,6 +15,9 @@ vi <file-name>
 vim <file-name>
 cat <file-name>
 free -g
+nproc
+df -h
+top
 
 
 
