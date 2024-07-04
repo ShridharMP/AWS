@@ -18,6 +18,15 @@ free -g
 nproc
 df -h
 top
+vim sample-scripting.sh
+chmod 777 sample-scripting.sh
+history
+clear
+./first-shell-script.sh
+sh first-shell-script.sh
+cat first-shell-script.sh
+sudo apt install vim (to install vim on linux-ubumtu)
+
 
 
 
