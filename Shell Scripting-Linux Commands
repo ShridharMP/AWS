@@ -14,6 +14,7 @@ grep <file-name>
 vi <file-name>
 vim <file-name>
 cat <file-name>
+free -g
 
 
 
