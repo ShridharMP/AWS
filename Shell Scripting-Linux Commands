@@ -1,1 +1,19 @@
+Common Linux Coomands
+***************************
+pwd
+ls
+ls -a
+ls-ltr
+cd
+cd ../..
+mkdir <folder-name>
+rm
+rm -r
+touch <file-name>
+grep <file-name>
+vi <file-name>
+vim <file-name>
+cat <file-name>
+
+
 
