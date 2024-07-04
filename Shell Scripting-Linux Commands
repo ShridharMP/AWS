@@ -11,7 +11,9 @@ mkdir <folder-name>
 rm
 rm -r
 touch <file-name>
-grep <file-name>
+grep [OPTION...] PATTERNS [FILE...]
+grep "fruit" fruits.txt
+grep -i "berries" fruits.txt
 vi <file-name>
 vim <file-name>
 cat <file-name>
