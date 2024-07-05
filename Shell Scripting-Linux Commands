@@ -43,29 +43,6 @@ q!
 wq!
 trap
 chmod +x forloop.sh
-If Else Bash Script
-#########################################
-#!/bin/bash
-a=10
-b=20
-if [ "$a" -gt "$b" ]; then
-        echo "a $a is greater than b $b"
-else
-        echo "a $a is smaller than b $b"
-fi
-##########################################
-
-For Loop
-###########################################
-a=1
-for((a=1;a<=5;a++))
-do
-  echo "A value is:$a"
-done
-###########################################
-
-Write Bash script to print no which is divisible by 3 and 5 not by 15 between numbers 1 to 100
-###############################################################################################
 
 
 
