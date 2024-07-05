@@ -42,7 +42,7 @@ exit
 q!
 wq!
 trap
-
+chmod +x forloop.sh
 If Else Bash Script
 #########################################
 #!/bin/bash
@@ -64,6 +64,8 @@ do
 done
 ###########################################
 
+Write Bash script to print no which is divisible by 3 and 5 not by 15 between numbers 1 to 100
+###############################################################################################
 
 
 
