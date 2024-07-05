@@ -1,1 +1,74 @@
+1. What is a sticky bit in Linux?
+The sticky bit is a permission bit that can be set on directories. When set, it allows only the file's owner, the directory's owner, or the root user to delete or rename the files within that directory. This is typically used on directories like /tmp to prevent users from deleting each other's files.
+
+To set the sticky bit on a directory:
+chmod +t directory_name
+To verify if the sticky bit is set, you can use ls -ld and look for the t at the end of the permission string:
+ls -ld /tmp
+# Output: drwxrwxrwt  14 root root 4096 Jul  6 10:15 /tmp
+
+
+
+2. How do we verify if our shell script is executed successfully?
+You can check the exit status of the script. The exit status of the last executed command is stored in the special variable $?. An exit status of 0 typically means success, while any non-zero value indicates an error.
+
+Example:
+./your_script.sh
+if [ $? -eq 0 ]; then
+    echo "Script executed successfully"
+else
+    echo "Script failed"
+fi
+
+
+3. What is the flag to check if a file is empty or not?
+The -s flag can be used in a conditional statement to check if a file is not empty.
+
+Example:
+if [ -s filename ]; then
+    echo "File is not empty"
+else
+    echo "File is empty"
+fi
+
+
+4. What is a positional parameter?
+Positional parameters are the variables $1, $2, $3, etc., in a shell script, which are assigned the values of the arguments passed to the script.
+
+Example:
+#!/bin/bash
+echo "First argument: $1"
+echo "Second argument: $2"
+# To run the script: ./script.sh arg1 arg2
+
+
+5. What is command substitution?
+Command substitution allows the output of a command to replace the command itself in a shell script. It is done using backticks (`command`) or $(command).
+
+Example:
+today=$(date)
+echo "Today's date is $today"
+
+
+6. How do you set crontab?
+You can set a crontab by using the crontab -e command to edit your crontab file. Each line in the crontab file represents a job, with the timing and command specified.
+
+Example:
+# Open crontab editor
+crontab -e
+
+# Add a cron job to run a script every day at midnight
+0 0 * * * /path/to/your_script.sh
+
+7. How will your .sh script configured in CRONTAB run when the system is restarted?
+To ensure your .sh script runs when the system restarts, you need to add an @reboot cron job.
+
+Example:
+# Open crontab editor
+crontab -e
+
+# Add a cron job to run the script at reboot
+@reboot /path/to/your_script.sh
+
+This configuration will ensure that your script executes every time the system reboots.
 
