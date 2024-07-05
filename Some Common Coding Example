@@ -1,0 +1,7 @@
+#To Print no of "s" character in mississippi word
+####################################################
+#!/bin/bash
+name="mississippi"
+grep -o "s" <<<"$name" | wc -l
+
+
