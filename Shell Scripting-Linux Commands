@@ -33,6 +33,36 @@ ps -ef | grep "python" |awk -F" " '{print $2}'
 ps
 ps -ef
 ps -ef | grep "python"
+kill
+sudo su - root
+sudo su -
+sudo find / -name shell
+find
+exit
+q!
+wq!
+trap
+
+If Else Bash Script
+#########################################
+#!/bin/bash
+a=10
+b=20
+if [ "$a" -gt "$b" ]; then
+        echo "a $a is greater than b $b"
+else
+        echo "a $a is smaller than b $b"
+fi
+##########################################
+
+For Loop
+###########################################
+a=1
+for((a=1;a<=5;a++))
+do
+  echo "A value is:$a"
+done
+###########################################
 
 
 
