@@ -1,0 +1,18 @@
+Step-by-Step Installation on an EC2 Instance
+****************************************************
+connect it from linux Terminal or any other terminal 
+syntax: ssh -i <location_of-pem-file>ubuntu@<public-ip-address>
+ex: ssh -i /home/shree/Downloads/aws-ubuntuec2key.pem ubuntu@34.224.173.224
+                    OR
+   ssh -i your-key.pem ec2-user@your-ec2-instance-public-dns
+
+Steps to install aws cli
+*********************************************
+   sudo apt update -y
+   sudo apt install -y unzip curl
+   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+   ls
+   unzip awscliv2.zip
+   cd aws
+   sudo ./install
+   aws --version
