@@ -7,7 +7,10 @@ ex: ssh -i /home/shree/Downloads/aws-ubuntuec2key.pem ubuntu@34.224.173.224
    ssh -i your-key.pem ec2-user@your-ec2-instance-public-dns
 
 aws configure
-
+AWS access Key: ANXGS*****************
+AWS Password  : ****************+cCo
+Default region name [us-east-1]: 
+Default output format [json]:
 
 Steps to install aws cli
 *********************************************
