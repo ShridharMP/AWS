@@ -6,6 +6,9 @@ ex: ssh -i /home/shree/Downloads/aws-ubuntuec2key.pem ubuntu@34.224.173.224
                     OR
    ssh -i your-key.pem ec2-user@your-ec2-instance-public-dns
 
+aws configure
+
+
 Steps to install aws cli
 *********************************************
    sudo apt update -y
