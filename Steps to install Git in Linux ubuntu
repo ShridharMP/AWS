@@ -1,0 +1,8 @@
+sudo apt-get update
+sudo apt-get install git-all
+git version
+
+
+
+Installing Git: https://github.com/git-guides/install-git
+Cloning fromRepo: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
