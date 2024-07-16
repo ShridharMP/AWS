@@ -10,5 +10,5 @@ cd ansible
 ssh-keygen  (this cmd will generate 3files namely authorized-keys,ida-rsa(private key) ,ida-rsa.pub key (public key)
 add public key of masteror source node ec2 instance in target or slave node of ec2 instance
 Connect to target node from master node using the (ssh ip-address of target) ex: ssh 172.31.91.104
-Once connection is successfull we can give commands to target node from master node by creating ansible playbook or ansible commands
+Once connection is successfull we can give commands to target node from master node by creating ansible playbook or ansible adhoc commands
  
