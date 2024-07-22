@@ -35,10 +35,17 @@ How to write playbook
 https://sujitpatel.in/article/how-to-install-nginx-using-ansible-playbook/
 ex:
 ---
-- hosts: web
+---
+- name: Install and start nginx
+  hosts: all
+  become: yes
+  become_user: root
+
   tasks:
     - name: install nginx
-      apt: name=nginx state=latest
+      apt: 
+          name: nginx 
+          state: present
     - name: start nginx
       service:
           name: nginx
@@ -53,7 +60,8 @@ Overall, this playbook will ensure that the Nginx web server is installed and ru
 
 
 
-
+How to check whether nginx installed or not
+sudo systemctl status nginx
 
 
 
