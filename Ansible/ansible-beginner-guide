@@ -17,3 +17,10 @@ Once connection is successfull we can give commands to target node from master n
 cd ansible
 vim inventory
 ansible -i inventory all -m "shell" -a "touch devopsclass"
+
+
+playbook is nothing but Ansible file
+everytime no need to write playbook for small task for that use adhoc commands 
+fallow below link to write shell script or playbook or ansible file --shell – Execute shell commands on targets
+(https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html)
+
