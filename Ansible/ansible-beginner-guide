@@ -30,6 +30,26 @@ Examples:
         ansible -i inventory all -m "shell" -a "nproc"
 
 
+How to write playbook
+**************************************************************************
+https://sujitpatel.in/article/how-to-install-nginx-using-ansible-playbook/
+ex:
+---
+- hosts: web
+  tasks:
+    - name: install nginx
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
+
+The first line, “—“, is a YAML syntax marker indicating the start of a YAML file.
+The “hosts” line specifies the group of hosts that the playbook will run against, in this case the “web” group.
+The “tasks” section lists the individual tasks that will be executed on each host in the group. In this case, there are two tasks.
+The first task, “install nginx”, uses the “apt” module to install the Nginx web server. The “name” parameter specifies the name of the package to install (in this case, “nginx”), and the “state” parameter specifies that Ansible should ensure the package is installed and up to date.
+The second task, “start nginx”, uses the “service” module to start the Nginx service. The “name” parameter specifies the name of the service (in this case, “nginx”), and the “state” parameter specifies that Ansible should ensure the service is running.
+Overall, this playbook will ensure that the Nginx web server is installed and running on all hosts in the “web” group.
 
 
 
