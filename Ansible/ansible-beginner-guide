@@ -1,14 +1,16 @@
-create 2EC2 instances --> (master and slave) or (source and target)
-mkdir ansible
-sudo apt update
-sudo apt install ansible
-ansible --version
-Create inventory file in ansible folder
-Add target EC2 instance private IP address in inventory file
-Connect with master ec2 instance with target ec2 intance using password less authentication
-cd ansible
-ssh-keygen  (this cmd will generate 3files namely authorized-keys,ida-rsa(private key) ,ida-rsa.pub key (public key)
-add public key of masteror source node ec2 instance in target or slave node of ec2 instance
+ssh-copy-id ip-address --.it is to connect to targetor slave node but this command don't have enough permission to do some activity 
+as we wanted.
+create 2EC2 instances --> (master and slave) or (source and target).
+mkdir ansible.
+sudo apt update.
+sudo apt install ansible.
+ansible --version.
+Create inventory file in ansible folder.
+Add target EC2 instance private IP address in inventory file.
+Connect with master ec2 instance with target ec2 intance using password less authentication.
+cd ansible.
+ssh-keygen  (this cmd will generate 3files namely authorized-keys,ida-rsa(private key) ,ida-rsa.pub key (public key).
+add public key of master or source node ec2 instance in target or slave node of ec2 instance.
 Connect to target node from master node using the (ssh ip-address of target) ex: ssh 172.31.91.104
 Once connection is successfull we can give commands to target node from master node by creating ansible playbook or ansible adhoc commands
  
