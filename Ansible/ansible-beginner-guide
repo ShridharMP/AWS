@@ -33,8 +33,8 @@ Examples:
 How to write playbook
 **************************************************************************
 https://sujitpatel.in/article/how-to-install-nginx-using-ansible-playbook/
-ex:
----
+Ex:
+**********************************************************************************************************
 ---
 - name: Install and start nginx
   hosts: all
@@ -50,7 +50,7 @@ ex:
       service:
           name: nginx
           state: started
-
+**********************************************************************************************************
 The first line, “—“, is a YAML syntax marker indicating the start of a YAML file.
 The “hosts” line specifies the group of hosts that the playbook will run against, in this case the “web” group.
 The “tasks” section lists the individual tasks that will be executed on each host in the group. In this case, there are two tasks.
@@ -58,10 +58,39 @@ The first task, “install nginx”, uses the “apt” module to install the Ng
 The second task, “start nginx”, uses the “service” module to start the Nginx service. The “name” parameter specifies the name of the service (in this case, “nginx”), and the “state” parameter specifies that Ansible should ensure the service is running.
 Overall, this playbook will ensure that the Nginx web server is installed and running on all hosts in the “web” group.
 
+How to run playbook
+ansible-playbook -i inventory.cfg nginx_install.yml -b
+                        or
+ansible-playbook -i inventory firstplaybook.yml -b
+                        or
+ansible-playbook -i inventory firstplaybook.yml
+
+ansible-playbook is the Ansible command used to run a playbook.
+-i inventory.cfg specifies the inventory file to use. In this case, the inventory file is inventory.cfg.
+nginx_install.yml or firstplaybook is the name of the playbook file to run. In this case, the playbook file is nginx_install.yml.
+-b is a short form of the --become option, which tells Ansible to run the playbook with elevated privileges (i.e., as a superuser). This option is typically required for tasks that require elevated permissions, such as installing packages or modifying system configuration files.
+So, putting it all together, the command will run the nginx_install.yml playbook against the hosts listed in the inventory.cfg file, with elevated privileges.
 
 
 How to check whether nginx installed or not
+**********************************************
 sudo systemctl status nginx
+
+
+OutPut:
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2024-07-23 03:42:09 UTC; 21s ago
+       Docs: man:nginx(8)
+    Process: 2503 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 2505 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 2506 (nginx)
+      Tasks: 2 (limit: 1130)
+     Memory: 1.7M (peak: 1.9M)
+        CPU: 12ms
+     CGroup: /system.slice/nginx.service
+             ├─2506 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             └─2507 "nginx: worker process"
 
 
 
