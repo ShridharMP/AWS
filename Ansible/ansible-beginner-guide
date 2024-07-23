@@ -100,8 +100,13 @@ Industry level task
 .configure 1 instance as master (Ansible)
 .other 2 ec2 instance as worker or slave or target (Ansible)
 
+ansible-galaxy role init kuberenetes
+- Role kuberenetes was created successfully
 
+Ansible interview Questions:
+---------------------------------
+https://www.youtube.com/watch?v=j5PgN0J3d7M&t=4s
 
-
+https://github.com/ansible/ansible-examples/tree/master/
 
 
