@@ -65,7 +65,11 @@ sudo systemctl status nginx
 
 
 
-
+Industry level task
+----------------------
+.Create 3 EC2 instancein AWS clous (Terraform)
+.configure 1 instance as master (Ansible)
+.other 2 ec2 instance as worker or slave or target (Ansible)
 
 
 
